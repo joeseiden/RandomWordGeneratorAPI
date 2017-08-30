@@ -5,8 +5,6 @@ class Vowel < ApplicationRecord
   validates :openness, inclusion: { in: %w(Close Near-Close Close-Mid Mid Open-Mid Near-Open Open) }
   validates :frontness, inclusion: { in: %w(Front Near-Front Central Near-Back Back) }
 
-  alias :to_s, :char
-
   def name
     @name ||= "#{openness} #{frontness} #{rounded ? 'Rounded' : 'Unrounded'} Vowel"
   end
@@ -15,5 +13,9 @@ class Vowel < ApplicationRecord
     Vowel.find_by(openness: features[:openness],
                   frontness: features[:frontness],
                   rounded: features[:rounded])
+  end
+
+  def to_s
+    char
   end
 end
