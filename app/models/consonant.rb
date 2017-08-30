@@ -7,8 +7,10 @@ class Consonant < ApplicationRecord
 
   alias :to_s, :char
 
-  def self.find_by_features(point, method, voiced)
-    Consonant.find_by(point: point, method: method, voiced: voiced)
+  def self.find_by_features(features)
+    Consonant.find_by(point: features[:point],
+                      method: features[:method],
+                      voiced: features[:voiced])
   end
 
   def self.valid_consonant?(new_con)
