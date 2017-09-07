@@ -1,1 +1,1 @@
-json.partial! "api/consonants/consonant", consonant: @consonant
+json.partial! "/consonants/consonant", consonant: @consonant
