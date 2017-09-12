@@ -19,6 +19,6 @@ export const fetchAllConsonants = () => (
 
 export const fetchChartableConsonants = () => (
   $.ajax({
-    url: `api/consonants?chartable=${true}`
+    url: `consonants?chartable=${true}`
   })
 );

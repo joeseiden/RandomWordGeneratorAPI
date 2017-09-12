@@ -13,7 +13,7 @@ export const fetchVowelInventory = inventory => (
 
 export const fetchAllVowels = () => (
   $.ajax({
-    url: `api/vowels`
+    url: `vowels`
   })
 );
 
