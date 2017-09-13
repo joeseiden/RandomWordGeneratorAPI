@@ -6,16 +6,16 @@ class ConsonantsController < ApplicationController
       @consonants = Consonant.all
     end
     if params[:chartable]
-      render "api/consonants/chartable_index"
+      render "/consonants/chartable_index"
     else
-      render "api/consonants/index"
+      render "/consonants/index"
     end
   end
 
   def show
     @consonant = Consonant.find(params[:id])
     if @consonant
-      render "api/consonants/show"
+      render "/consonants/show"
     else
       render json: @consonant.errors.full_messages, status: 404
     end

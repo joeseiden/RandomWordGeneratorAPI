@@ -1,24 +1,24 @@
 export const fetchVowel = id => (
   $.ajax({
-    url: `vowels/${id}`
+    url: `/vowels/${id}`
   })
 );
 
 export const fetchVowelInventory = inventory => (
   $.ajax({
-    url: `vowels`,
+    url: `/vowels`,
     inventory
   })
 );
 
 export const fetchAllVowels = () => (
   $.ajax({
-    url: `vowels`
+    url: `/vowels`
   })
 );
 
 export const fetchChartableVowels = () => (
   $.ajax({
-    url: `vowels?chartable=${true}`
+    url: `/vowels?chartable=${true}`
   })
 );

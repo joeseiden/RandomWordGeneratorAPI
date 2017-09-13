@@ -1,6 +1,6 @@
 export const generateWords = (consonants, vowels, syllable_structure, length, count) => (
   $.ajax({
-    url: `words`,
+    url: `/words`,
     word_gen: {
       consonants,
       vowels,
